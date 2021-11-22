@@ -212,15 +212,16 @@ let sum = 0
 for (let index = 0; index < 1000; index++) {
     sum += 1
 }
-if ((input.runningTimeMicros() - first)>2000 ){
+basic.showNumber(input.runningTimeMicros() - first);
+if ((input.runningTimeMicros() - first) > 2000 ){
     microbit_wait = 5000; 
-    basic.showString("V2")
+    basic.showString("V2");
 
     }
 else
     {
     microbit_wait = 900;
-    basic.showString("V11")
+    basic.showString("V1");
 
     }
 
