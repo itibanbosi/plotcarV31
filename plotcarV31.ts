@@ -190,7 +190,8 @@ let Stepping_L = [
     [0, 0, 0, 0],
 ];
 
-
+//LED不使用
+led.enable(false)
 
 pins.digitalWritePin(DigitalPin.P3, 0)
 pins.digitalWritePin(DigitalPin.P4, 0)
@@ -215,17 +216,16 @@ for (let index = 0; index < 1000; index++) {
 //basic.showNumber(input.runningTimeMicros() - first);
 if ((input.runningTimeMicros() - first) < 2000 ){
     microbit_wait = 5000; 
-    basic.showString("V2");
+//    basic.showString("V2");
 
     }
 else
     {
     microbit_wait = 900;
-    basic.showString("V1");
+//    basic.showString("V1");
     }
 
-//LED不使用
-led.enable(false)
+
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
