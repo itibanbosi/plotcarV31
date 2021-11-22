@@ -191,7 +191,7 @@ let Stepping_L = [
 ];
 
 
-led.enable(false)
+//led.enable(false)
 pins.digitalWritePin(DigitalPin.P3, 0)
 pins.digitalWritePin(DigitalPin.P4, 0)
 pins.digitalWritePin(DigitalPin.P6, 0)
@@ -213,11 +213,15 @@ for (let index = 0; index < 1000; index++) {
     sum += 1
 }
 if ((input.runningTimeMicros() - first)>2000 ){
-    microbit_wait = 5000;
+    microbit_wait = 5000; 
+    basic.showString("V2")
+
     }
 else
     {
     microbit_wait = 900;
+    basic.showString("V11")
+
     }
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
