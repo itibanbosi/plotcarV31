@@ -442,7 +442,7 @@ namespace eureka_plotter_car {
 
 
     //% color="#3943c6" weight=80　blockId=plottercar_zengo
-    //% block=" |%zengo|へ |%F_cm| ｃｍ進む" group="2 基本の動き"
+    //% block=" |%zengo|へ |%F_cm| ｃｍ進む" group="2　基本の動き"
     export function plottercar_zengo(zengo: plotter_houkou, F_cm: number): void {
         switch (zengo) {
             case plotter_houkou.前:
