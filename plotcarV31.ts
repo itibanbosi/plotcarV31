@@ -703,20 +703,18 @@ export function plottercar_houkou(muki: houkou): void {
     //% color="#f071bd" weight=30 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="7 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     //% advanced=true
     export function phto_R() {
-
         return Math.round((pins.analogReadPin(AnalogPin.P10) / 1023) * 100);
     }
 
     //% color="#f071bd" weight=28 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="7 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     //% advanced=true
     export function phto_L() {
-
         return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
     }
 
     //% color="#d4b41f"  weight=26 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_R| より小さい" group="7 ﾌｫﾄﾘﾌﾚｸﾀｰ"
-    //% advanced=true
     //% limit_R.min=0 limit_R.max=100
+    //% advanced=true
     export function photo_R(limit_R: number): boolean {
         if (eureka_plotter_car.phto_R() <= limit_R) {
             io_neo.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
