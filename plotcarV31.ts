@@ -206,6 +206,19 @@ let io_neo = neopixel.create(DigitalPin.P9, 4, NeoPixelMode.RGB);
 io_neo.showRainbow(1,360)
 eureka_plotter_car.plottercar_pen(pen_updown.up)
 
+//バージョンの判定
+let first = input.runningTimeMicros()
+let sum = 0
+for (let index = 0; index < 1000; index++) {
+    sum += 1
+}
+if ((input.runningTimeMicros() - first)>2000 ){
+    microbit_wait = 5000;
+    }
+else
+    {
+    microbit_wait = 900;
+    }
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
