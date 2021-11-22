@@ -226,30 +226,8 @@ else
     }
 
 
-
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
-
-    //% color="#ff3d03" weight=34 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="4 初期設定"
-    export function microbit_version_info(Version_info: microbit_version) {
-        switch (Version_info) {
-            case microbit_version.Version1:
-                microbit_wait = 900;
-                break;
-            case microbit_version.Version2:
-                microbit_wait = 5000;
-                break;
-            case microbit_version.Test_A:
-                microbit_wait = 10000;
-                break;
-            case microbit_version.Test_B:
-                microbit_wait = 90000;
-                break;
-        }
-    }
-
-
-
     function moter(kyori: number, R_zengo: number, L_zengo: number) {
         led.enable(false);
         let i = 0;
@@ -449,17 +427,6 @@ namespace eureka_plotter_car {
 
     }
 
-    //% color="#ff3d03" weight=35 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="4 初期設定"
-    export function auto_led_off(Matrix_LED: microbit_LED) {
-        switch (Matrix_LED) {
-            case microbit_LED.無効:
-                led.enable(false);
-                break;
-            case microbit_LED.有効:
-                led.enable(true);
-        }
-    }
-
 
     //% color="#009CA0" weight=96 blockId=eureka_relay block="ペン |%mode| " group="1 ペンの状態"
     export function plottercar_pen(mode: pen_updown) {
@@ -543,6 +510,20 @@ namespace eureka_plotter_car {
 
 
 
+//% color="#3943c6" weight=72　blockId=plottercar_houkou
+//% block="ほうこうを変える |%muki| へ " group="2　基本の動き"
+export function plottercar_houkou(muki: houkou): void {
+    switch (muki) {
+        case houkou.右へ直角:
+            return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.右, 90);
+        case houkou.左へ直角:
+            return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.左, 90);
+        case houkou.ななめ右:
+            return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.右, 45);
+        case houkou.ななめ左:
+            return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.左, 45);
+    }
+}
 
 
 
@@ -587,18 +568,36 @@ namespace eureka_plotter_car {
         }
     }
 
-    //% color="#3943c6" weight=72　blockId=plottercar_houkou
-    //% block="ほうこうを変える |%muki| へ " group="2　基本の動き"
-    export function plottercar_houkou(muki: houkou): void {
-        switch (muki) {
-            case houkou.右へ直角:
-                return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.右, 90);
-            case houkou.左へ直角:
-                return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.左, 90);
-            case houkou.ななめ右:
-                return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.右, 45);
-            case houkou.ななめ左:
-                return eureka_plotter_car.plottercar_RL_cycle(plotter_RL.左, 45);
+
+
+    //% color="#ff3d03" weight=34 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="4 初期設定"
+    export function microbit_version_info(Version_info: microbit_version) {
+        switch (Version_info) {
+            case microbit_version.Version1:
+                microbit_wait = 900;
+                break;
+            case microbit_version.Version2:
+                microbit_wait = 5000;
+                break;
+            case microbit_version.Test_A:
+                microbit_wait = 10000;
+                break;
+            case microbit_version.Test_B:
+                microbit_wait = 90000;
+                break;
+        }
+    }
+
+
+
+    //% color="#ff3d03" weight=35 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="4 初期設定"
+    export function auto_led_off(Matrix_LED: microbit_LED) {
+        switch (Matrix_LED) {
+            case microbit_LED.無効:
+                led.enable(false);
+                break;
+            case microbit_LED.有効:
+                led.enable(true);
         }
     }
 
