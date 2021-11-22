@@ -230,7 +230,7 @@ else
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
 
-    //% color="#ff3d03" weight=90 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="4 初期設定"
+    //% color="#ff3d03" weight=34 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="4 初期設定"
     export function microbit_version_info(Version_info: microbit_version) {
         switch (Version_info) {
             case microbit_version.Version1:
