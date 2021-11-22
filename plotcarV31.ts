@@ -449,7 +449,7 @@ namespace eureka_plotter_car {
 
     }
 
-    //% color="#ff3d03" weight=90 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="4 初期設定"
+    //% color="#ff3d03" weight=35 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="4 初期設定"
     export function auto_led_off(Matrix_LED: microbit_LED) {
         switch (Matrix_LED) {
             case microbit_LED.無効:
