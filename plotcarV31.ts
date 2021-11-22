@@ -191,7 +191,7 @@ let Stepping_L = [
 ];
 
 
-//led.enable(false)
+
 pins.digitalWritePin(DigitalPin.P3, 0)
 pins.digitalWritePin(DigitalPin.P4, 0)
 pins.digitalWritePin(DigitalPin.P6, 0)
@@ -222,8 +222,10 @@ else
     {
     microbit_wait = 900;
     basic.showString("V1");
-
     }
+
+//LED不使用
+led.enable(false)
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
