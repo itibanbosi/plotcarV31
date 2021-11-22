@@ -203,8 +203,8 @@ pins.digitalWritePin(DigitalPin.P16, 0)
 
 let moter_number = 0;
 let io_neo = neopixel.create(DigitalPin.P9, 4, NeoPixelMode.RGB);
-//plotLED_blocks.neopixel_rainbow()
-eureka_plotter_car.plottercar_pen(pen_updown.up)
+io_neo.showRainbow(1,360)
+
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
@@ -913,61 +913,61 @@ namespace plotLED_blocks {
         switch (neo_color) {
             case neoLED_color.赤:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Red))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Red))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.だいだい:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Orange))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Orange))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.黄:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Yellow))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Yellow))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.緑:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Green))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Green))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.青:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Blue))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Blue))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.あい:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Indigo))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Indigo))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.すみれ:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Violet))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Violet))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.紫:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Purple))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Purple))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.白:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.White))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.White))
                 }
                 io_neo.show()
                 break;
             case neoLED_color.黒:
                 for (let n = 0; n < neo_number; n++) {
-                    io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Black))
+                    io_neo.showColor(neopixel.colors(NeoPixelColors.Black))
                 }
                 io_neo.show()
                 break;
@@ -997,3 +997,6 @@ namespace plotLED_blocks {
 
 
 }
+
+
+
