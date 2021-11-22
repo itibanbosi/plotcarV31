@@ -230,7 +230,7 @@ else
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
 
-    //% color="#ff3d03" weight=90 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="1 初期設定"
+    //% color="#ff3d03" weight=90 blockId=Microbit_Version_info block="ﾏｲｸﾛﾋﾞｯﾄのバージョンを設定する |%Version_info| にする" group="4 初期設定"
     export function microbit_version_info(Version_info: microbit_version) {
         switch (Version_info) {
             case microbit_version.Version1:
@@ -449,7 +449,7 @@ namespace eureka_plotter_car {
 
     }
 
-    //% color="#ff3d03" weight=90 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="1 初期設定"
+    //% color="#ff3d03" weight=90 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを |%Matrix_LED| にする" group="4 初期設定"
     export function auto_led_off(Matrix_LED: microbit_LED) {
         switch (Matrix_LED) {
             case microbit_LED.無効:
@@ -461,7 +461,7 @@ namespace eureka_plotter_car {
     }
 
 
-    //% color="#009CA0" weight=96 blockId=eureka_relay block="ペン |%mode| " group="2 ペンの状態"
+    //% color="#009CA0" weight=96 blockId=eureka_relay block="ペン |%mode| " group="1 ペンの状態"
     export function plottercar_pen(mode: pen_updown) {
         if (mode == pen_updown.down) {
             pins.servoWritePin(AnalogPin.P8, 0);
@@ -475,7 +475,7 @@ namespace eureka_plotter_car {
 
 
     //% color="#3943c6" weight=80　blockId=plottercar_zengo
-    //% block=" |%zengo|へ |%F_cm| ｃｍ進む" group="3　基本の動き"
+    //% block=" |%zengo|へ |%F_cm| ｃｍ進む" group="2　基本の動き"
     export function plottercar_zengo(zengo: plotter_houkou, F_cm: number): void {
         switch (zengo) {
             case plotter_houkou.前:
@@ -491,7 +491,7 @@ namespace eureka_plotter_car {
     }
 
     //% color="#3943c6" weight=76　blockId=plottercar_RL_cycle
-    //% block="|%RorL| 回り　角度 |%L_degree| " group="3　基本の動き"
+    //% block="|%RorL| 回り　角度 |%L_degree| " group="2　基本の動き"
     export function plottercar_RL_cycle(RorL: plotter_RL, RL_degree: number): void {
         switch (RorL) {
             case plotter_RL.左:
@@ -507,14 +507,14 @@ namespace eureka_plotter_car {
 
 
     //% color="#ff4940" weight=71　blockId=plottercar_rest
-    //% block="停止状態（電流ＯＦＦ）" group="3　基本の動き"
+    //% block="停止状態（電流ＯＦＦ）" group="2　基本の動き"
     export function plottercar_frest(): void {
         moter_number = 1;
         moter(moter_number, 0, 1);
     }
 
     //% color="#3943c6" weight=55　blockId=plottercar_R_step
-    //% block="右車輪　|%R_step|ステップ |%houkou|方向" group="3　基本の動き"
+    //% block="右車輪　|%R_step|ステップ |%houkou|方向" group="2　基本の動き"
 
     export function plottercar_R_step(R_step: number, houkou: plotter_houkou): void {
         moter_number = R_step;
@@ -528,7 +528,7 @@ namespace eureka_plotter_car {
         }
     }
     //% color="#3943c6" weight=58　blockId=plottercar_L_step
-    //% block="左車輪 |%L_step|ステップ |%houkou|方向" group="3　基本の動き"
+    //% block="左車輪 |%L_step|ステップ |%houkou|方向" group="2　基本の動き"
     export function plottercar_L_step(L_step: number, houkou: plotter_houkou): void {
         moter_number = L_step;
         switch (houkou) {
@@ -547,7 +547,7 @@ namespace eureka_plotter_car {
 
 
     //% color="#009A00" weight=40　blockId=polygon
-    //% block="多角形作図 |%digree_step| 角形　一辺の長さ |%Edge_Num|cm  |%RorL|回り " group="4　図形"
+    //% block="多角形作図 |%digree_step| 角形　一辺の長さ |%Edge_Num|cm  |%RorL|回り " group="3　図形"
     export function polygon(digree_step: number, Edge_Num: number, RorL: plotter_RL): void {
         switch (RorL) {
             case plotter_RL.右:
@@ -567,7 +567,7 @@ namespace eureka_plotter_car {
 
 
     //% color="#009A00" weight=39　blockId=cycle
-    //% block="円の作図 直径 |%D_Num|cm  |%RorL|回り" group="4　図形"
+    //% block="円の作図 直径 |%D_Num|cm  |%RorL|回り" group="3　図形"
     export function cycle(D_Num: number, RorL: plotter_RL): void {
         let cir = D_Num * 3.14
         let Foward_D = cir / 30
@@ -588,7 +588,7 @@ namespace eureka_plotter_car {
     }
 
     //% color="#3943c6" weight=72　blockId=plottercar_houkou
-    //% block="ほうこうを変える |%muki| へ " group="3　基本の動き"
+    //% block="ほうこうを変える |%muki| へ " group="2　基本の動き"
     export function plottercar_houkou(muki: houkou): void {
         switch (muki) {
             case houkou.右へ直角:
