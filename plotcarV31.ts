@@ -912,64 +912,35 @@ namespace plotLED_blocks {
 
         switch (neo_color) {
             case neoLED_color.赤:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Red))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.だいだい:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Orange))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.黄:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Yellow))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.緑:
-                for (let n = 0; n < neo_number; n++) {
+
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Green))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.青:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Blue))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.あい:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Indigo))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.すみれ:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Violet))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.紫:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Purple))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.白:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.White))
-                }
-                io_neo.show()
                 break;
             case neoLED_color.黒:
-                for (let n = 0; n < neo_number; n++) {
                     io_neo.showColor(neopixel.colors(NeoPixelColors.Black))
-                }
-                io_neo.show()
                 break;
         }
     }
@@ -982,9 +953,8 @@ namespace plotLED_blocks {
     //% color="#cd853f" weight=80 blockId=neopixel_erace block="ﾌﾙｶﾗｰLEDを全部消す" group="ﾌﾟﾛｯﾄｶｰLED"
     export function neopixel_erace_block() {
         for (let n = 0; n < 4; n++) {
-            io_neo.setPixelColor(n, neopixel.colors(NeoPixelColors.Black))
+            io_neo.showColor(neopixel.colors(NeoPixelColors.Black))
         }
-        io_neo.show()
     }
 
     //% color="#1E90FF" weight=83 block="待ち時間（秒）|%second|" group="ﾌﾟﾛｯﾄｶｰLED"
