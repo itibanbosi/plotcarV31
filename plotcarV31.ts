@@ -204,6 +204,7 @@ pins.digitalWritePin(DigitalPin.P16, 0)
 let moter_number = 0;
 let io_neo = neopixel.create(DigitalPin.P9, 4, NeoPixelMode.RGB);
 io_neo.showRainbow(1,360)
+eureka_plotter_car.plottercar_pen(pen_updown.up)
 
 
 //% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
