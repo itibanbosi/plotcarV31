@@ -53,9 +53,9 @@ enum kyori {
     短い,
 }
 enum sence_select {
-    普通,
-    高感度,
-    低感度,
+    普通３０,
+    高感度２０,
+    低感度４０,
 }
 enum microbit_version {
     Version1,
@@ -760,13 +760,13 @@ export function plottercar_houkou(muki: houkou): void {
     //% sence.min=10 sence.max=40
     //% advanced=true
     export function photo_R_out(wb: whiteblack, sikii: sence_select): boolean {
-        if (sikii == sence_select.低感度) {
+        if (sikii == sence_select.低感度４０) {
             sikii = 40;
         }
-        if (sikii == sence_select.普通) {
+        if (sikii == sence_select.普通３０) {
             sikii = 30;
         }
-        if (sikii == sence_select.高感度) {
+        if (sikii == sence_select.高感度２０) {
             sikii = 20;
         }
         if (eureka_plotter_car.phto_R() <= sikii) {
@@ -801,13 +801,13 @@ export function plottercar_houkou(muki: houkou): void {
     //% color="#6041f1"  weight=34 block="左だけが |%wb| をふんだ時 しきい値 |%sikii| " group="7 ﾌｫﾄﾘﾌﾚｸﾀｰ" 
     //% advanced=true
     export function photo_L_out(wb: whiteblack, sikii: sence_select): boolean {
-        if (sikii == sence_select.低感度) {
+        if (sikii == sence_select.低感度４０) {
             sikii = 40;
         }
-        if (sikii == sence_select.普通) {
+        if (sikii == sence_select.普通３０) {
             sikii = 30;
         }
-        if (sikii == sence_select.高感度) {
+        if (sikii == sence_select.高感度２０) {
             sikii = 20;
         }
         if (eureka_plotter_car.phto_R() <= sikii) {
@@ -843,13 +843,13 @@ export function plottercar_houkou(muki: houkou): void {
     //% color="#6041f1"  weight=35 block="左右とも |%wb| をふんでいる時 しきい値 |%sikii| " group="7 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     //% advanced=true
     export function photo_LR_out(wb: whiteblack, sikii: sence_select): boolean {
-        if (sikii == sence_select.低感度) {
+        if (sikii == sence_select.低感度４０) {
             sikii = 40;
         }
-        if (sikii == sence_select.普通) {
+        if (sikii == sence_select.普通３０) {
             sikii = 30;
         }
-        if (sikii == sence_select.高感度) {
+        if (sikii == sence_select.高感度２０) {
             sikii = 20;
         }
         if (eureka_plotter_car.phto_R() <= sikii) {
