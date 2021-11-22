@@ -925,7 +925,7 @@ export function plottercar_houkou(muki: houkou): void {
 namespace plotLED_blocks {
 
 
-    //% color="#20b2aa" weight=82 blockId=neopixel_select block="ﾌﾙｶﾗｰLED |%neo_color| 色で |%neo_number|個つける" group="ﾌﾟﾛｯﾄｶｰLED"
+    //% color="#20b2aa" weight=82 blockId=neopixel_select block="ﾌﾙｶﾗｰLED |%neo_color| 色で光る" group="ﾌﾟﾛｯﾄｶｰLED"
     export function neopixel_select_block(neo_color: neoLED_color, neo_number: number) {
 
         switch (neo_color) {
