@@ -1,4 +1,4 @@
-/* plot_car Ver3.2*/
+/* plot_car Ver3.3*/
 
 let wait = 0;
 let Tugi_R = 0;
@@ -226,7 +226,7 @@ else
     }
 
 
-//% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.0" weight=95 icon="\uf1b9"
+//% color="#3943c6" block="ﾌﾟﾛｯﾄｶｰVer3.3" weight=95 icon="\uf1b9"
 namespace eureka_plotter_car {
     function moter(kyori: number, R_zengo: number, L_zengo: number) {
         led.enable(false);
