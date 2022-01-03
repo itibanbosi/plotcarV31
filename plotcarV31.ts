@@ -62,6 +62,8 @@ enum microbit_version {
     Version2,
     Test_A,
     Test_B,
+    V1_Turbo,
+    V2_Turbo,
 }
 
 enum onoff {
@@ -585,6 +587,14 @@ export function plottercar_houkou(muki: houkou): void {
             case microbit_version.Test_B:
                 microbit_wait = 90000;
                 break;
+            case microbit_version.V1_Turbo:
+                microbit_wait = 500;
+                break;
+            case microbit_version.V2_Turbo:
+                microbit_wait = 2500;
+                break;
+
+
         }
     }
 
