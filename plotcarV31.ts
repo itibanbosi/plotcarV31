@@ -591,7 +591,7 @@ export function plottercar_houkou(muki: houkou): void {
                 microbit_wait = 450;
                 break;
             case microbit_version.V2_Turbo:
-                microbit_wait = 1500;
+                microbit_wait = 2500;
                 break;
 
 
